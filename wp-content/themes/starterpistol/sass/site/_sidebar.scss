@@ -1,0 +1,62 @@
+.sidebar {
+	float: none; 
+	padding-left: 0;
+	width: 100%;
+	@include breakpoint(1000px, $no-query: true) {
+		float: right; 
+		padding-left: 3%;
+	  width: 30%;
+	}
+}
+
+.sidebar--one,
+.sidebar--two,
+.sidebar--three {
+	color: $white;
+	display: block;
+	margin-bottom: 2em;
+	padding: 2em;
+	position: relative;
+	h3 {
+		border-bottom: 5px solid $white;
+		color: $white;
+		font-weight: 400;
+		left: 0;
+		margin-top: 0;
+		padding: 0 1em 1em 1em;
+		position: absolute;
+		text-align: center;
+		text-transform: uppercase;
+		width: 100%;
+	}
+	a {
+		color: $white;
+		text-decoration: none;
+	}
+	ul {
+		margin: 0;
+		padding: 0 0 0 1em;
+		li {
+			line-height: 2;
+		}
+	}
+	.textwidget {
+		margin-top: 5em;
+	}
+}
+
+.sidebar--one {
+	background-color: $blue;
+	display: none;
+	@include breakpoint(1000px, $no-query: true) {
+		display: block;
+	}
+}
+
+.sidebar--two {
+	background-color: $md-gray;
+}
+
+.sidebar--three {
+	background-color: $black;
+}

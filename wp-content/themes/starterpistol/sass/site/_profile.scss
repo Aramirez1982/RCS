@@ -1,0 +1,20 @@
+.profile {
+	-ms-flex-preferred-size: 25%;
+	flex-basis: 25%;
+	float: none;
+	text-align: center;
+	@include breakpoint(900px, $no-query: true) {
+		float: left;
+		text-align: left;
+	}
+}
+
+.profile__image {
+	border: 5px solid $blue;
+	margin-bottom: 2em;
+	width: 250px;
+	@include breakpoint(900px, $no-query: true) {
+		margin-bottom: 0;
+		width: 75%;
+	}
+}

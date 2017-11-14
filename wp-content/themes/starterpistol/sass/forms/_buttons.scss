@@ -1,0 +1,166 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: none;
+	border-radius: 0;
+	background-color: $blue;
+	color: $white;
+	font-family: $font__main;
+	font-size: $font-sm;
+	line-height: 1.5;
+	padding: 15px;
+	white-space: pre-line;
+	width: 100%;
+	@include breakpoint(600px, $no-query: true) {
+		font-size: $base-font;
+	}
+
+	&:hover {
+		background-color: $md-gray;
+	}
+
+	&:active,
+	&:focus {
+		background-color: $md-gray;
+	}
+}
+
+.button__container {
+	padding: 2em;
+	text-align: center;
+	width: 100%;
+	@include breakpoint(450px, $no-query: true) {
+		padding: 2em 2em 2em 4em;
+	}
+	@include breakpoint(1050px, $no-query: true) {
+		padding: 0;
+	}
+}
+
+.button-resume,
+.button-resume-pdf,
+.button-linkedin {
+	display: block;
+	overflow: visible;
+	@include breakpoint(1050px, $no-query: true) {
+		display: inline-block;
+	}
+}
+
+.button-resume {
+	margin-left: 0;
+}
+
+.button-resume-pdf {
+	margin-left: 0;
+	@include breakpoint(1050px, $no-query: true) {
+		margin-left: 8%;
+	}
+}
+
+.button-linkedin {
+	display: block;
+	margin-left: 0;
+	@include breakpoint(1050px, $no-query: true) {
+		display: inline-block;
+		margin-left: 8%;
+	}
+}
+
+.button--resume,
+.button--resume-pdf {
+	font-weight: 300;
+	text-align: center;
+	a {
+		background-color: $md-gray;
+		border-radius: 5px;
+		color: $white;
+		display: block;
+		padding: .75em 2em;
+		text-decoration: none;
+		&:hover, &:focus {
+			background-color: $blue;
+			color: $white;
+		}
+	}
+}
+
+.button--resume,
+.button--resume-pdf,
+.button--linkedin {
+	position: relative;
+	&:before {
+		background-repeat: no-repeat;
+		content: "";
+		display: none;
+		position: absolute;
+		left: -45px;
+		height: 40px;
+		top: 0;
+		width: 40px;
+		@include breakpoint(450px, $no-query: true) {
+			display: inline-block;
+		}
+	}
+}
+
+.button--resume {
+	&:before {
+		background-image: url(images/icons/document-list.png);
+	}
+}
+
+.button--resume-pdf {
+	&:before {
+		background-image: url(images/icons/document-file-pdf.png);
+	}
+}
+
+.button--linkedin {
+	font-weight: 300;
+	text-align: center;
+	&:before {
+		background-image: url(images/icons/linkedin2.png);
+	}
+	a {
+		background-color: $linkedin;
+		border-radius: 5px;
+		color: $white;
+		display: block;
+		padding: .75em 2em;
+		text-decoration: none;
+		&:hover, &:focus {
+			background-color: lighten($linkedin, 5%);
+			color: $white;
+		}
+	}
+}
+
+.buttons__helper-text {
+	color: $black;
+	font-size: $font-sm;
+	font-weight: 300;
+	margin-top: .5em;
+	text-align: center;
+}
+
+.button--hireme {
+	text-align: center;
+	a {
+		background-color: $blue;
+		color: $white;
+		display: inline-block;
+		font-size: $font-md;
+		padding: 1em 4em;
+		text-decoration: none;
+		text-transform: uppercase;
+		@include breakpoint(400px, $no-query: true) {
+			font-size: $font-lg;
+		}
+		&:hover, &:focus {
+			background-color: $md-gray;
+			color: $white;
+		}
+	}
+}

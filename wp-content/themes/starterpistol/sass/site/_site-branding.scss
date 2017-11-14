@@ -1,0 +1,24 @@
+.site-branding {
+	display: none;
+	@include breakpoint(975px, $no-query: true) {
+		display: block;
+	}
+}
+
+.site-title {
+	display: none;
+	font-family: $font__main;
+	font-size: $font-xxl;
+	letter-spacing: 10px;
+	margin: .5em 0;
+	text-align: center;
+	@include breakpoint(975px, $no-query: true) {
+		margin-bottom: 0;
+		margin-top: 32px;
+		text-align: left;
+	}
+	a {
+		color: $white;
+		text-decoration: none;
+	}
+}

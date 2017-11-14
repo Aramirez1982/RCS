@@ -1,0 +1,42 @@
+.site-footer {
+	background-color: $black;
+	padding: 1em 0;
+	text-align: center;
+}
+
+.menu-footer-menu-container {
+	padding: 2em 0;
+	text-align: center;
+	a {
+		color: $white;
+		text-decoration: none;
+		&:hover, &:focus {
+			border-bottom: 1px solid $white;
+		}
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		display: block;
+		list-style: none;
+		@include breakpoint(475px, $no-query: true) {
+			display: inline-block;
+		}
+		&:after {
+			content: "|";
+			display: none;
+			padding-left: 1em;
+			padding-right: 1em;
+			@include breakpoint(475px, $no-query: true) {
+				display: inline-block;
+			}
+		}
+		&:last-child {
+			&:after {
+				display: none;
+			}
+		}
+	}
+}

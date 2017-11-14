@@ -1,0 +1,17 @@
+.summary {
+	margin: 4em 0 2em 0;
+	h1 {
+		border-bottom: 5px solid $blue;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	h3 {
+	  border-bottom: 5px solid $blue;
+	  color: $md-gray;
+		font-size: $font-lg - 3px;
+		font-weight: 600;
+		margin-bottom: 0;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}

@@ -1,0 +1,51 @@
+.hero-text {
+  color: $white;
+  -ms-flex-preferred-size: 75%;
+  flex-basis: 75%;
+	font-size: 32px;
+	font-weight: 600;
+	hyphens: auto;
+	line-height: 1;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	z-index: 3;
+	@include breakpoint(500px, $no-query: true) {
+		hyphens: none;
+		font-size: 36px;
+	}
+	@include breakpoint(900px, $no-query: true) {
+		font-size: 42px;
+		text-align: left;
+	}
+	@include breakpoint(1050px, $no-query: true) {
+		font-size: 55px;
+	}
+	p {
+		margin: 0;
+		a {
+			color: $white;
+			text-decoration: none;
+			&:hover, &:focus {
+				border-bottom: 1px solid $white;
+				color: $white;
+			}
+		}
+	}
+}
+
+.hero-text__contact {
+	clear: both;
+	color: $white;
+	font-size: $base-font - 2px;
+	font-weight: 600;
+	hyphens: auto;
+	line-height: 2;
+	text-align: center;
+	text-transform: none;
+	@include breakpoint(925px, $no-query: true) {
+		clear: none;
+		hyphens: none;
+		text-align: left;
+	}
+}

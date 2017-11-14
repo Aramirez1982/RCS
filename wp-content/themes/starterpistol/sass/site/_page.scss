@@ -1,0 +1,17 @@
+.page {}
+
+.page__content {
+	float: none;
+	margin-bottom: 2em;
+	width: 100%;
+	@include breakpoint(1000px, $no-query: true) {
+		float: left;
+		margin-bottom: 2em;
+		width: 70%;
+	}
+}
+
+.page__content-internal {
+	padding-bottom: 4em;
+	width: 100%;
+}

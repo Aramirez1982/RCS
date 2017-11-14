@@ -1,0 +1,129 @@
+.main-navigation {
+	clear: both;
+	float: none;
+	font-family: $font__secondary;
+	font-size: $font-sm;
+	line-height: 50px;
+	overflow: hidden;
+	@include breakpoint(975px, $no-query: true) {
+		float: right;
+		line-height: 112px;
+	}
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				}
+			}
+
+			a {
+				width: 200px;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		float: left;
+		margin-left: 2em;
+		position: relative;
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+
+	a {
+		color: $nav-link;
+		display: block;
+		text-decoration: none;
+		&:hover, &:focus {
+			color: $nav-link-hover;
+		}
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+
+.menu-toggle {
+	display: none;
+	@include breakpoint(750px, $no-query: true) {
+		display: none;
+	}
+}
+
+.main-navigation ul {
+	display: none;
+	@include breakpoint(750px, $no-query: true) {
+		display: block;
+	}
+}
+
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}
+
+

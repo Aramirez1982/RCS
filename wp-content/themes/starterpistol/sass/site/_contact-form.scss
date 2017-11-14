@@ -1,0 +1,55 @@
+.contact-form {
+	text-align: center;
+	h5 {
+		font-size: 18px;
+	}
+	input[type="submit"] {
+		width: 100%;
+	}
+}
+
+.contact-form__name,
+.contact-form__email {
+	display: inline-block;
+	margin-bottom: .5em;
+	max-width: 100%;
+	width: 100%;
+	@include breakpoint(1250px, $no-query: true) {
+		width: 49%;
+	}
+}
+
+.contact-form__name {
+	margin-right: 0;
+	@include breakpoint(1250px, $no-query: true) {
+		margin-right: .75%;
+	}
+}
+
+.contact-form__email {
+	margin-left: 0;
+	@include breakpoint(1250px, $no-query: true) {
+		margin-left: .75%;
+	}
+}
+
+// Contact Form 7 Classes
+span.wpcf7-list-item {
+	display: block;
+	margin: 2em auto;
+}
+
+span.wpcf7-list-item-label {
+	color: $black;
+	font-family: $font__main;
+	font-size: $base-font;
+}
+
+div.wpcf7-mail-sent-ok {
+	border: 2px solid $green;
+	font-weight: 900;
+}
+
+div.wpcf7-response-output {
+	padding: 1em;
+}

@@ -1,0 +1,49 @@
+.site-header {
+	height: 0;
+	.page-template-full-width-internal &, 
+	.single-post & {
+		background-color: $blue;
+		height: 50px;
+	}
+	.single-post & {
+		margin-bottom: 2em;
+	}
+	.page-template-full-width-internal &, 
+	.single-post &,
+	.single-post & {
+		display: none;
+		@include breakpoint(900px, $no-query: true) {
+			display: block;
+		}
+	}
+}
+
+.site-navigation {
+	display: none;
+}
+
+.site-description {
+	display: none;
+}
+
+.site-header__back {
+	line-height: 50px;
+	overflow: visible;
+	a {
+		color: $white;
+		line-height: .1;
+		padding: 1em 2em;
+		text-decoration: none;
+		&:hover, &:focus {
+			background-color: $white;
+			color: $blue;
+		}
+	}
+	ul {
+		margin: 0;
+		li {
+			display: inline-block;
+			list-style: none;
+		}
+	}
+}

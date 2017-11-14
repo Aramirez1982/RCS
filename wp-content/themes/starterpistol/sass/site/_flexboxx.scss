@@ -1,0 +1,31 @@
+.flexboxx {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.flexboxx__item {
+	-ms-flex-item-align: start;
+	align-self: flex-start;
+	-ms-flex-preferred-size: 100%;
+	flex-basis: 100%;
+	margin-bottom: 2.5em;
+	text-align: center;
+	@include breakpoint(525px, $no-query: true) {
+		-ms-flex-preferred-size: 50%;
+		flex-basis: 50%;
+	}
+	@include breakpoint(750px, $no-query: true) {
+		-ms-flex-preferred-size: 33.333333%;
+		flex-basis: 33.333333%;
+	}
+	@include breakpoint(1000px, $no-query: true) {
+		-ms-flex-preferred-size: 25%;
+		flex-basis: 25%;
+	}
+	.entry-utility {
+		display: none;
+	}
+}
